@@ -25,7 +25,7 @@ class _FormsState extends State<Forms> {
     passwordEC.dispose();
   }
 
-  // teste
+  // teste - passa para a arquitetura
   Widget customTextFormField({
     required TextEditingController controller,
     required String labelText,
