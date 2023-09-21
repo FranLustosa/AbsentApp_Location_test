@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/forms.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/views/discipline_view.dart';
+import 'package:flutter_primeiros_passos/src/views/forms.dart';
 import 'package:flutter_primeiros_passos/src/views/splashScreen.dart';
 
 void main() {
