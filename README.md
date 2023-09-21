@@ -1,4 +1,4 @@
-# flutter_primeiros_passos
+# Ambiente de Teste da Arquitetura MVVM aplicado ao AbsentApp
 
 A new Flutter project.
 
