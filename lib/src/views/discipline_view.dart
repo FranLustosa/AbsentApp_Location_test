@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/models/discipline.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 
 class DisciplineDetailScreen extends StatelessWidget {
   @override
@@ -11,23 +13,32 @@ class DisciplineDetailScreen extends StatelessWidget {
       location: 'Local da Disciplina',
       responsible: 'Responsável pela Disciplina',
     );
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Detalhes da Disciplina'),
-      ),
+      appBar: null,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Nome: ${discipline.name}'),
-            Text('Descrição: ${discipline.description}'),
-            SizedBox(height: 16),
-            _buildInfoRow(
-                Icons.push_pin_outlined, 'Local', discipline.location),
-            _buildInfoRow(
-                Icons.groups_outlined, 'Responsável', discipline.responsible),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "Olá, bem vindo !",
+                  style: TextStyle(
+                      color: DesignSystem.textColor,
+                      fontSize: Tipografia.titleFontSize),
+                ),
+              ),
+              Text('Nome: ${discipline.name}'),
+              Text('Descrição: ${discipline.description}'),
+              SizedBox(height: 16),
+              _buildInfoRow(
+                  Icons.push_pin_outlined, 'Local', discipline.location),
+              _buildInfoRow(
+                  Icons.groups_outlined, 'Responsável', discipline.responsible),
+            ],
+          ),
         ),
       ),
     );

@@ -12,6 +12,6 @@ class Icones {
   static const IconData inactiveCheckbox = Icons.check_box_outline_blank;
   static const IconData confirmation = Icons.check_circle_outline;
   static const IconData alert = Icons.privacy_tip_outlined;
-  static const IconData ViewPassword = Icons.visibility_outlined;
-  static const IconData NotViewPassword = Icons.visibility_off_outlined;
+  static const IconData viewPassword = Icons.visibility_outlined;
+  static const IconData notViewPassword = Icons.visibility_off_outlined;
 }

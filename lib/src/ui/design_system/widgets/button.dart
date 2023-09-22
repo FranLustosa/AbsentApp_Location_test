@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 
 class BotaoAcessar extends StatelessWidget {
   @override
@@ -9,6 +10,7 @@ class BotaoAcessar extends StatelessWidget {
       height: 60,
       child: ElevatedButton(
         onPressed: () {
+          Navigator.pop(context);
           // Adicione a ação que você deseja executar ao pressionar o botão aqui.
         },
         style: ElevatedButton.styleFrom(
@@ -17,8 +19,8 @@ class BotaoAcessar extends StatelessWidget {
         child: Text(
           'Acessar',
           style: TextStyle(
-            fontSize: 20,
-            color: Colors.white, // Cor do texto do botão
+            fontSize: Tipografia.textFontSize,
+            color: DesignSystem.white,
           ),
         ),
       ),

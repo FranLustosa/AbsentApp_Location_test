@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/button.dart';
 import 'package:flutter_primeiros_passos/src/viewmodels/FormsViewModel.dart';
 
 class Forms extends StatelessWidget {
@@ -29,7 +30,7 @@ class Forms extends StatelessWidget {
           ),
           Text(
             " Acesse sua conta ",
-            style: TextStyle(fontSize: Tipografia.bodyFontSize),
+            style: TextStyle(fontSize: Tipografia.titleFontSize),
           ),
           Form(
             key: viewModel.formKey,
@@ -64,23 +65,7 @@ class Forms extends StatelessWidget {
                     },
                   ),
                   SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      var user = viewModel.getUser();
-                      if (user != null) {
-                        // Faça algo com os dados do usuário
-                        Navigator.pushNamed(context, '/disciplineDetail');
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text("Formulário Inválido")),
-                        );
-                      }
-                    },
-                    child: Text(
-                      "Acessar",
-                      selectionColor: DesignSystem.primaryColor,
-                    ),
-                  ),
+                  BotaoAcessar(),
                 ],
               ),
             ),
