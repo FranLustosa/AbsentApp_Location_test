@@ -1,9 +1,9 @@
 class LoginModel {
-  final String usuario;
+  final String user;
   final String senha;
 
   LoginModel({
-    required this.usuario,
+    required this.user,
     required this.senha,
   });
 }

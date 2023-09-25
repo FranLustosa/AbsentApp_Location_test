@@ -26,7 +26,7 @@ class DisciplineDetailScreen extends StatelessWidget {
                 child: Text(
                   "Olá, bem vindo !",
                   style: TextStyle(
-                      color: DesignSystem.textColor,
+                      color: ColorSystem.textColor,
                       fontSize: Tipografia.titleFontSize),
                 ),
               ),

@@ -14,13 +14,13 @@ class BotaoAcessar extends StatelessWidget {
           // Adicione a ação que você deseja executar ao pressionar o botão aqui.
         },
         style: ElevatedButton.styleFrom(
-            backgroundColor: DesignSystem.primaryColor // Cor de fundo do botão
+            backgroundColor: ColorSystem.primaryColor // Cor de fundo do botão
             ),
         child: Text(
           'Acessar',
           style: TextStyle(
             fontSize: Tipografia.textFontSize,
-            color: DesignSystem.white,
+            color: ColorSystem.white,
           ),
         ),
       ),

@@ -9,7 +9,7 @@ class FormsViewModel extends ChangeNotifier {
 
   LoginModel? getUser() {
     if (formKey.currentState?.validate() ?? false) {
-      return LoginModel(usuario: nameEC.text, senha: passwordEC.text);
+      return LoginModel(user: nameEC.text, senha: passwordEC.text);
     }
     return null;
   }

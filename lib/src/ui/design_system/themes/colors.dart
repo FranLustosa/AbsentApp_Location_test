@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DesignSystem {
+class ColorSystem {
   // Cores
   static const Color primaryColor = Color(0xFF00265F);
   static const Color borderColor = Color(0xFF747474);

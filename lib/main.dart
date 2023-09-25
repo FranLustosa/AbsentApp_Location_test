@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
+import 'package:flutter_primeiros_passos/src/views/HomeScreen2.dart';
 import 'package:flutter_primeiros_passos/src/views/discipline_view.dart';
 import 'package:flutter_primeiros_passos/src/views/forms_view.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen.dart';
+import 'package:flutter_primeiros_passos/src/views/responsibleLogin.dart';
 import 'package:flutter_primeiros_passos/src/views/splashScreen.dart';
 
 void main() {
@@ -20,14 +22,17 @@ class MyApp extends StatelessWidget {
       routes: {
         '/disciplineDetail': (context) => DisciplineDetailScreen(),
         '/SplashScreen': (context) => SplashScreen(),
-        '/BotaoAcessar': (context) => DisciplineDetailScreen()
+        '/BotaoAcessar': (context) => DisciplineDetailScreen(),
+        "/forms": (context) => Forms(),
+        "/HomeScreen2": (context) => HomeScreen2(),
+        "/HomeScreen": (context) => HomeScreen(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
         // ignore: deprecated_member_use
-        backgroundColor: DesignSystem.primaryColor,
+        backgroundColor: ColorSystem.primaryColor,
       ),
-      home: Forms(),
+      home: HomeScreen(),
     );
   }
 }
