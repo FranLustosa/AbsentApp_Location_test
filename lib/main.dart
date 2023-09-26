@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
-import 'package:flutter_primeiros_passos/src/views/HomeScreen2.dart';
+import 'package:flutter_primeiros_passos/src/views/home.dart';
+import 'package:flutter_primeiros_passos/src/views/homeScreen2.dart';
 import 'package:flutter_primeiros_passos/src/views/discipline_view.dart';
 import 'package:flutter_primeiros_passos/src/views/forms_view.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen.dart';
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
         "/forms": (context) => Forms(),
         "/HomeScreen2": (context) => HomeScreen2(),
         "/HomeScreen": (context) => HomeScreen(),
+        "/Home": (context) => Home(),
+        '/responsibleLogin': (context) => ResponsibleLogin(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(

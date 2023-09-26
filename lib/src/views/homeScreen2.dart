@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/card.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/cards.dart';
 
 class HomeScreen2 extends StatefulWidget {
   const HomeScreen2({super.key});
@@ -39,7 +39,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
           Container(
             constraints:
                 BoxConstraints(maxHeight: 500), // Defina uma altura máxima
-            child: CardInformation(),
+            child: CardInformation2(),
           ),
         ],
       ),

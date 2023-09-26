@@ -72,7 +72,7 @@ class _ResponsibleLoginState extends State<ResponsibleLogin> {
                         viewModel.togglePasswordVisibility();
                       },
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 30),
                     BotaoAcessar(),
                   ],
                 ),

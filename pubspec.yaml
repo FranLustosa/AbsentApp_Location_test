@@ -81,6 +81,7 @@ flutter:
   assets:
     - assets/image/primeira.png
     - assets/image/segunda.png
+    - assets/logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

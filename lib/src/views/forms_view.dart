@@ -14,7 +14,10 @@ class Forms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: ColorSystem.white,
+        elevation: 0,
+      ),
       body: Column(
         children: [
           SizedBox(height: 20),

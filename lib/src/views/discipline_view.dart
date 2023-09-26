@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/models/discipline.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/buttomnavigatiorbar.dart';
 
 class DisciplineDetailScreen extends StatelessWidget {
   @override
@@ -14,7 +15,10 @@ class DisciplineDetailScreen extends StatelessWidget {
       responsible: 'Responsável pela Disciplina',
     );
     return Scaffold(
-      appBar: null,
+      appBar: AppBar(
+        backgroundColor: ColorSystem.primaryColor,
+        elevation: 0,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),

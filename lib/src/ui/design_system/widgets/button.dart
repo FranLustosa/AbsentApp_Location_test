@@ -10,11 +10,16 @@ class BotaoAcessar extends StatelessWidget {
       height: 60,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context).pushNamed("/disciplineDetail");
           // Adicione a ação que você deseja executar ao pressionar o botão aqui.
         },
         style: ElevatedButton.styleFrom(
-            backgroundColor: ColorSystem.primaryColor // Cor de fundo do botão
+            fixedSize: Size(400, 70),
+            backgroundColor: ColorSystem.primaryColor,
+            primary: ColorSystem.white,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+            // Cor de fundo do botão
             ),
         child: Text(
           'Acessar',
@@ -28,15 +33,54 @@ class BotaoAcessar extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Exemplo de Botão Flutter'),
+class BotaoResponsavel extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 60,
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pop(context);
+          // Adicione a ação que você deseja executar ao pressionar o botão aqui.
+        },
+        style: ElevatedButton.styleFrom(
+            backgroundColor: ColorSystem.primaryColor // Cor de fundo do botão
+            ),
+        child: Text(
+          'Sou responsável',
+          style: TextStyle(
+            fontSize: Tipografia.textFontSize,
+            color: ColorSystem.white,
+          ),
+        ),
       ),
-      body: Center(
-        child: BotaoAcessar(),
+    );
+  }
+}
+
+class BotaoParticipante extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 60,
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pop(context);
+          // Adicione a ação que você deseja executar ao pressionar o botão aqui.
+        },
+        style: ElevatedButton.styleFrom(
+            backgroundColor: ColorSystem.primaryColor // Cor de fundo do botão
+            ),
+        child: Text(
+          'Sou Participante',
+          style: TextStyle(
+            fontSize: Tipografia.textFontSize,
+            color: ColorSystem.white,
+          ),
+        ),
       ),
-    ),
-  ));
+    );
+  }
 }
