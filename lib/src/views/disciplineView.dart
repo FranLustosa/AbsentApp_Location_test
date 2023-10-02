@@ -17,6 +17,7 @@ class DisciplineDetailScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorSystem.primaryColor,
         elevation: 0,
+        //automaticallyImplyLeading: false, para bloquear a volta
       ),
       body: Center(
         child: Padding(

@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: ColorSystem.primaryColor,
         elevation: 0,
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
