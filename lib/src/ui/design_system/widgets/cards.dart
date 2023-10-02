@@ -149,8 +149,7 @@ class _CardHomeState extends State<CardHome> {
             child: Stack(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: size.height * 0.2),
-                  height: 500,
+                  height: double.infinity,
                   decoration: BoxDecoration(
                     color: ColorSystem.white,
                     borderRadius: BorderRadius.only(

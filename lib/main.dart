@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         // ignore: deprecated_member_use
         backgroundColor: ColorSystem.primaryColor,
       ),
-      home: HomeScreen(),
+      home: Home(),
     );
   }
 }

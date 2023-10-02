@@ -20,7 +20,7 @@ class Forms extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           IconButton(
             icon: Icon(
               Icones.back,
@@ -33,7 +33,9 @@ class Forms extends StatelessWidget {
           ),
           Text(
             " Acesse sua conta ",
-            style: TextStyle(fontSize: Tipografia.titleFontSize),
+            style: TextStyle(
+                color: ColorSystem.primaryColor,
+                fontSize: Tipografia.titleFontSize),
           ),
           Form(
             key: viewModel.formKey,

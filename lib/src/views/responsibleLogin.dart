@@ -27,7 +27,7 @@ class _ResponsibleLoginState extends State<ResponsibleLogin> {
           leading: IconButton(
             icon: Icon(Icones.back),
             onPressed: () {},
-            color: ColorSystem.borderColor,
+            color: ColorSystem.primaryColor,
           ),
         ),
         body: Column(
