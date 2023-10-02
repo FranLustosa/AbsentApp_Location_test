@@ -1,9 +1,7 @@
-// --- PÁGINA QUE VISUALIZO APÓS LE O QRCODE --- //
-
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/cards.dart';
-import 'package:flutter_primeiros_passos/src/views/forms_view.dart';
+import 'package:flutter_primeiros_passos/src/views/formsView.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,11 +28,8 @@ class _HomeState extends State<Home> {
             width: 400, // Largura desejada
             height: 200, // Altura desejada
           ),
-          Container(
-            constraints:
-                BoxConstraints(maxHeight: 500), // Defina uma altura máxima
-            child: CardHome(),
-          ),
+          SizedBox(height: 30),
+          Expanded(child: CardHomeButtons()),
         ],
       ),
     );

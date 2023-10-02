@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/button.dart';
 import 'package:flutter_primeiros_passos/src/viewmodels/FormsViewModel.dart';
 
-class ResponsibleLogin extends StatelessWidget {
+class Forms extends StatelessWidget {
   final FormsViewModel viewModel = FormsViewModel();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameEC = TextEditingController();
@@ -95,31 +96,12 @@ class ResponsibleLogin extends StatelessWidget {
                       child: ButtonAccessResponsible(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(18),
+                      padding: const EdgeInsets.all(12.0),
                       child: Text(
                         " Esqueci minha senha ",
                         style: TextStyle(
                             color: ColorSystem.primaryColor,
                             fontSize: Tipografia.textsmallFontSize),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: RichText(
-                        text: TextSpan(
-                          text: "Não tem conta? ",
-                          style: TextStyle(
-                            color: Colors
-                                .black, // Defina a cor do texto para preto (ou a cor desejada)
-                            fontSize: Tipografia.textsmallFontSize,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: "Cadastre-se",
-                              style: TextStyle(color: ColorSystem.primaryColor),
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ],

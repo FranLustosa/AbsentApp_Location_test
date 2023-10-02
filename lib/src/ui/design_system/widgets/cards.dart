@@ -130,77 +130,49 @@ class _CardInformation2State extends State<CardInformation2> {
   }
 }
 
-class CardHome extends StatefulWidget {
-  const CardHome({super.key});
-
-  @override
-  State<CardHome> createState() => _CardHomeState();
-}
-
-class _CardHomeState extends State<CardHome> {
+class CardHomeButtons extends StatelessWidget {
+  const CardHomeButtons({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
+    return Container(
+      decoration: BoxDecoration(
+        color: ColorSystem.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
-            height: size.height,
-            child: Stack(
-              children: [
-                Container(
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    color: ColorSystem.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10),
-                        // Botão "Sou Responsável" que preenche todo o container
-                        ElevatedButton(
-                          onPressed: () =>
-                              Navigator.of(context).pushNamed("/forms"),
-                          child: Text("Sou Responsável"),
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.all(
-                                20), // Ajuste o valor conforme necessário
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            backgroundColor: ColorSystem.primaryColor,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        // Botão "Sou Participante" com borda azul
-                        OutlinedButton(
-                          onPressed: () {
-                            // Ação quando o botão "Sou Participante" for pressionado
-                          },
-                          child: Text(
-                            "Sou Participante",
-                            style: TextStyle(color: ColorSystem.primaryColor),
-                          ),
-                          style: OutlinedButton.styleFrom(
-                            padding: EdgeInsets.all(
-                                20), // Ajuste o valor conforme necessário
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            side: BorderSide(color: ColorSystem.primaryColor),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+            height: 40,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                " Bem-vindo(a) ao Absent ",
+                style: TextStyle(fontSize: Tipografia.titleFontSize),
+              ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(14),
+            child: Center(
+              child: Text(
+                " Seu app de frequência acadêmica ",
+                style: TextStyle(fontSize: Tipografia.textsmallFontSize),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: ButtonResponsible(),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: ButtonParticipant(),
           ),
         ],
       ),

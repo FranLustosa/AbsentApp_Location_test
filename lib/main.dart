@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/views/home.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen2.dart';
-import 'package:flutter_primeiros_passos/src/views/discipline_view.dart';
-import 'package:flutter_primeiros_passos/src/views/forms_view.dart';
+import 'package:flutter_primeiros_passos/src/views/disciplineView.dart';
+import 'package:flutter_primeiros_passos/src/views/formsView.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen.dart';
+import 'package:flutter_primeiros_passos/src/views/participantLogin.dart';
 import 'package:flutter_primeiros_passos/src/views/responsibleLogin.dart';
 import 'package:flutter_primeiros_passos/src/views/splashScreen.dart';
+import 'package:flutter_primeiros_passos/src/views/viewQRcode.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +31,8 @@ class MyApp extends StatelessWidget {
         "/HomeScreen": (context) => HomeScreen(),
         "/Home": (context) => Home(),
         '/responsibleLogin': (context) => ResponsibleLogin(),
+        '/participantLogin': (context) => ParticipantLogin(),
+        '/viewQRcode': (context) => ViewQRcode(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
