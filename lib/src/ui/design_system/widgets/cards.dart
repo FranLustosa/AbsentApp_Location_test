@@ -152,7 +152,7 @@ class CardHomeButtons extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Center(
               child: Text(
-                " Bem-vindo(a) ao Absent ",
+                " Bem-vindo(a) ao AbsentApp ",
                 style: TextStyle(fontSize: Tipografia.titleFontSize),
               ),
             ),
@@ -161,7 +161,7 @@ class CardHomeButtons extends StatelessWidget {
             padding: const EdgeInsets.all(14),
             child: Center(
               child: Text(
-                " Seu app de frequência acadêmica ",
+                " Escaneie, Registre, Esteja Presente! ",
                 style: TextStyle(fontSize: Tipografia.textsmallFontSize),
               ),
             ),

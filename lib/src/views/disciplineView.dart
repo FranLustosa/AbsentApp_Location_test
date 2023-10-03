@@ -21,26 +21,97 @@ class DisciplineDetailScreen extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Olá, Maria de Sousa!",
+                          style: TextStyle(
+                            color: ColorSystem.textColor,
+                            fontSize: Tipografia.titleFontSize,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet consectetur",
+                          style: TextStyle(
+                            color: ColorSystem.textColor,
+                            fontSize: Tipografia.textsmallFontSize,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 18),
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/image/profile.png'),
+                    radius: 25,
+                  ),
+                ],
+              ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  "Olá, bem vindo !",
-                  style: TextStyle(
-                      color: ColorSystem.textColor,
-                      fontSize: Tipografia.titleFontSize),
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Colors.grey, // Cor da linha de divisão
+                        width: 1.0, // Largura da linha de divisão
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              Text('Nome: ${discipline.name}'),
-              Text('Descrição: ${discipline.description}'),
-              SizedBox(height: 16),
-              _buildInfoRow(
-                  Icons.push_pin_outlined, 'Local', discipline.location),
-              _buildInfoRow(
-                  Icons.groups_outlined, 'Responsável', discipline.responsible),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Disciplinas",
+                  style: TextStyle(
+                      color: ColorSystem.textDestaqueColor,
+                      fontSize: Tipografia.textFontSize),
+                ),
+              ),
+              Card(
+                elevation: 0,
+                color: ColorSystem.primaryColor
+                    .withOpacity(0.20), // Defina a cor desejada
+                margin: EdgeInsets.all(14.0),
+                // Defina a margem desejada
+                child: Container(
+                  constraints: BoxConstraints(minHeight: 150),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: _buildInfoRow(
+                          Icons.push_pin_outlined,
+                          'Local',
+                          discipline.location,
+                        ),
+                      ),
+                      // Adicione uma linha divisória
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: _buildInfoRow(
+                          Icons.groups_outlined,
+                          'Responsável',
+                          discipline.responsible,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),

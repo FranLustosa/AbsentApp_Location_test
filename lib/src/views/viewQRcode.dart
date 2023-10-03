@@ -20,18 +20,15 @@ class ViewQRcode extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  "Olá, bem vindo !",
-                  style: TextStyle(
-                      color: ColorSystem.textColor,
-                      fontSize: Tipografia.titleFontSize),
-                ),
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/image/qrcode.png',
+                width: 800, // Largura desejada
+                height: 500, // Altura desejada
               ),
             ],
           ),
