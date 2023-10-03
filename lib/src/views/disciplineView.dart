@@ -83,33 +83,128 @@ class DisciplineDetailScreen extends StatelessWidget {
               ),
               Card(
                 elevation: 0,
-                color: ColorSystem.primaryColor
-                    .withOpacity(0.20), // Defina a cor desejada
                 margin: EdgeInsets.all(14.0),
-                // Defina a margem desejada
-                child: Container(
-                  constraints: BoxConstraints(minHeight: 150),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: _buildInfoRow(
-                          Icons.push_pin_outlined,
-                          'Local',
-                          discipline.location,
+                color: Colors.transparent,
+                child: Stack(
+                  children: [
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/image/cardDisciplina.png'),
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      // Adicione uma linha divisória
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: _buildInfoRow(
-                          Icons.groups_outlined,
-                          'Responsável',
-                          discipline.responsible,
+                    ),
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      color: ColorSystem.primaryColor.withOpacity(0.60),
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.push_pin_outlined,
+                            'Local',
+                            discipline.location,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.groups_outlined,
+                            'Responsável',
+                            discipline.responsible,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                elevation: 0,
+                margin: EdgeInsets.all(14.0),
+                color: Colors.transparent,
+                child: Stack(
+                  children: [
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/image/cardDisciplina.png'),
+                          fit: BoxFit.cover,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      color: ColorSystem.primaryColor.withOpacity(0.60),
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.push_pin_outlined,
+                            'Local',
+                            discipline.location,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.groups_outlined,
+                            'Responsável',
+                            discipline.responsible,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                elevation: 0,
+                margin: EdgeInsets.all(14.0),
+                color: Colors.transparent,
+                child: Stack(
+                  children: [
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/image/cardDisciplina.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      constraints: BoxConstraints(minHeight: 150),
+                      color: ColorSystem.primaryColor.withOpacity(0.60),
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.push_pin_outlined,
+                            'Local',
+                            discipline.location,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: _buildInfoRow(
+                            Icons.groups_outlined,
+                            'Responsável',
+                            discipline.responsible,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               )
             ],
@@ -122,9 +217,17 @@ class DisciplineDetailScreen extends StatelessWidget {
   Widget _buildInfoRow(IconData icon, String label, String value) {
     return Row(
       children: [
-        Icon(icon),
+        Icon(
+          icon,
+          color: Colors.white, // Defina a cor do ícone como branca
+        ),
         SizedBox(width: 8),
-        Text('$label: $value'),
+        Text(
+          '$label: $value',
+          style: TextStyle(
+            color: Colors.white, // Defina a cor do texto como branca
+          ),
+        ),
       ],
     );
   }
