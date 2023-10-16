@@ -9,4 +9,5 @@ class ColorSystem {
   static const Color white = Color(0xFFFFFFFF);
   static const Color green = Color(0xFF00BC52);
   static const Color red = Color(0xFF8F0000);
+  // adicionar mais cores
 }
