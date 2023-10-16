@@ -26,13 +26,13 @@ class ResponsibleLogin extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: ColorSystem.primaryColor, // Cor do botão azul
+                  color: ColorSystem.primaryColor,
                 ),
                 child: Center(
                   child: Icon(
-                    Icons.arrow_back, // Ícone de seta para trás
+                    Icons.arrow_back,
                     color: Colors.white,
-                    size: 24, // Cor do ícone branco
+                    size: 24,
                   ),
                 ),
               ),
@@ -110,8 +110,7 @@ class ResponsibleLogin extends StatelessWidget {
                             text: TextSpan(
                               text: "Não tem conta? ",
                               style: TextStyle(
-                                color: Colors
-                                    .black, // Defina a cor do texto para preto (ou a cor desejada)
+                                color: Colors.black,
                                 fontSize: Tipografia.textsmallFontSize,
                               ),
                               children: [
@@ -160,13 +159,13 @@ Widget customTextFormField({
                 obscureText ? Icons.visibility : Icons.visibility_off,
               ),
             )
-          : null, // Só mostra o ícone se o campo for de senha
+          : null,
     ),
     validator: (String? value) {
       if (value == null || value.isEmpty) {
         return "Campo não foi preenchido";
       }
-      return null; // Retorna null quando o campo está preenchido corretamente
+      return null;
     },
   );
 }

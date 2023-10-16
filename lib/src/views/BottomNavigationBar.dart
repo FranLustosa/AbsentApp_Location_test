@@ -27,10 +27,6 @@ class BottomNavigationBar extends StatelessWidget {
           icon: Icon(Icons.help),
           label: 'Ajuda',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.help),
-          label: 'Ajuda',
-        ),
       ],
     );
   }

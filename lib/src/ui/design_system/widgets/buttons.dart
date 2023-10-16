@@ -13,7 +13,7 @@ class ButtonAccessResponsible extends StatelessWidget {
         onPressed: () => Navigator.of(context).pushNamed('/disciplineDetail'),
         child: Text("Acessar"),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(20), // Ajuste o valor conforme necessário
+          padding: EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -34,7 +34,7 @@ class ButtonAccessParticipant extends StatelessWidget {
         onPressed: () => Navigator.of(context).pushNamed('/viewQRcode'),
         child: Text("Acessar"),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(20), // Ajuste o valor conforme necessário
+          padding: EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -55,7 +55,7 @@ class ButtonResponsible extends StatelessWidget {
         onPressed: () => Navigator.of(context).pushNamed('/responsibleLogin'),
         child: Text("Sou Responsável"),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(20), // Ajuste o valor conforme necessário
+          padding: EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -80,7 +80,7 @@ class ButtonParticipant extends StatelessWidget {
           style: TextStyle(color: ColorSystem.primaryColor),
         ),
         style: OutlinedButton.styleFrom(
-          padding: EdgeInsets.all(20), // Ajuste o valor conforme necessário
+          padding: EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -105,8 +105,7 @@ class ButtonManually extends StatelessWidget {
               return AlertDialog(
                 contentPadding: EdgeInsets.all(8),
                 title: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween, // Ajuste o alinhamento
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
                       child: Text(

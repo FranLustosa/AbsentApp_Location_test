@@ -51,7 +51,7 @@ class _CardInformationState extends State<CardInformation> {
                             Navigator.of(context).pushNamed("/HomeScreen2"),
                         child: Icon(Icones.next),
                         style: ElevatedButton.styleFrom(
-                          shape: CircleBorder(), // Torna o botão redondo
+                          shape: CircleBorder(),
                           backgroundColor: ColorSystem.primaryColor,
                         ),
                       )
@@ -114,7 +114,7 @@ class _CardInformation2State extends State<CardInformation2> {
                             Navigator.of(context).pushNamed("/Home"),
                         child: Icon(Icones.next),
                         style: ElevatedButton.styleFrom(
-                          shape: CircleBorder(), // Torna o botão redondo
+                          shape: CircleBorder(),
                           backgroundColor: ColorSystem.primaryColor,
                         ),
                       )
@@ -192,8 +192,7 @@ class PopupError extends StatelessWidget {
             title: Column(
               children: [
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o ícone
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
                       Icones.alertError,
@@ -204,8 +203,7 @@ class PopupError extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o texto
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       child: Text(
@@ -240,8 +238,7 @@ class PopupValidation extends StatelessWidget {
             title: Column(
               children: [
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o ícone
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
                       Icones.confirmation,
@@ -252,8 +249,7 @@ class PopupValidation extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o texto
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       child: Text(
@@ -269,8 +265,7 @@ class PopupValidation extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o texto
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       child: Text(
@@ -284,8 +279,7 @@ class PopupValidation extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center, // centralizar o texto
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       child: Text(

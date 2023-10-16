@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/models/discipline.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 
 class ViewQRcode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Crie uma instância de DisciplineModel com valores definidos manualmente.
     final discipline = DisciplineModel(
       name: 'Nome da Disciplina',
       description: 'Descrição da Disciplina',
