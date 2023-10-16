@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
 
 class ButtonAccessResponsible extends StatelessWidget {
@@ -185,4 +184,3 @@ class ButtonManually extends StatelessWidget {
     );
   }
 }
-// teste
