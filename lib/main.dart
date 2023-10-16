@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/buttons.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/cards.dart';
 import 'package:flutter_primeiros_passos/src/views/home.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen2.dart';
 import 'package:flutter_primeiros_passos/src/views/disciplineView.dart';
 import 'package:flutter_primeiros_passos/src/views/formsView.dart';
 import 'package:flutter_primeiros_passos/src/views/homeScreen.dart';
+import 'package:flutter_primeiros_passos/src/views/manualEntry.dart';
 import 'package:flutter_primeiros_passos/src/views/participantLogin.dart';
 import 'package:flutter_primeiros_passos/src/views/responsibleLogin.dart';
 import 'package:flutter_primeiros_passos/src/views/splashScreen.dart';
@@ -33,6 +36,9 @@ class MyApp extends StatelessWidget {
         '/responsibleLogin': (context) => ResponsibleLogin(),
         '/participantLogin': (context) => ParticipantLogin(),
         '/viewQRcode': (context) => ViewQRcode(),
+        '/manualEntry': (context) => ManualEntry(),
+        '/popupError': (context) => PopupError(),
+        '/popupValidation': (context) => PopupValidation(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(

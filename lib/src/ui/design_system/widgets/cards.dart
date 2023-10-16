@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/button.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/buttons.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
 
 class CardInformation extends StatefulWidget {
@@ -177,5 +177,133 @@ class CardHomeButtons extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class PopupError extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            contentPadding: EdgeInsets.all(8),
+            title: Column(
+              children: [
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o ícone
+                  children: [
+                    Icon(
+                      Icones.alertError,
+                      color: ColorSystem.red,
+                      size: 30,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o texto
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Usuário não encontrado! Realize o cadastro e acesse o AbsentApp novamente.',
+                        style: TextStyle(fontSize: 12),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });
+
+    return Container();
+  }
+}
+
+class PopupValidation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            contentPadding: EdgeInsets.all(8),
+            title: Column(
+              children: [
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o ícone
+                  children: [
+                    Icon(
+                      Icones.confirmation,
+                      color: ColorSystem.green,
+                      size: 30,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o texto
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Presença confirmada com sucesso!',
+                        style: TextStyle(
+                            fontSize: Tipografia.textFontSize,
+                            color: ColorSystem.textColor),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o texto
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Usuário: Fernando Soares Lopes',
+                        style: TextStyle(fontSize: 12),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center, // centralizar o texto
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Sala: 201A4',
+                        style: TextStyle(fontSize: 12),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });
+
+    return Container();
   }
 }

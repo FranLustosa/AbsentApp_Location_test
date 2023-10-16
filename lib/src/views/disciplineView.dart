@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/models/discipline.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
 
 class DisciplineDetailScreen extends StatelessWidget {
   @override
@@ -17,7 +18,6 @@ class DisciplineDetailScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorSystem.primaryColor,
         elevation: 0,
-        //automaticallyImplyLeading: false, para bloquear a volta
       ),
       body: Center(
         child: Padding(
@@ -31,7 +31,7 @@ class DisciplineDetailScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Text(
                           "Olá, Maria de Sousa!",
                           style: TextStyle(
@@ -41,7 +41,7 @@ class DisciplineDetailScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Text(
                           "Lorem ipsum dolor sit amet consectetur",
                           style: TextStyle(
@@ -73,7 +73,7 @@ class DisciplineDetailScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "Disciplinas",
                   style: TextStyle(
@@ -81,132 +81,65 @@ class DisciplineDetailScreen extends StatelessWidget {
                       fontSize: Tipografia.textFontSize),
                 ),
               ),
-              Card(
-                elevation: 0,
-                margin: EdgeInsets.all(14.0),
-                color: Colors.transparent,
-                child: Stack(
-                  children: [
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/image/cardDisciplina.png'),
-                          fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () => Navigator.of(context).pushNamed('/manualEntry'),
+                child: Card(
+                  // card da disciplina
+                  elevation: 0,
+                  margin: EdgeInsets.all(14.0),
+                  color: Colors.transparent,
+                  child: Stack(
+                    children: [
+                      Container(
+                        constraints: BoxConstraints(minHeight: 150),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image:
+                                AssetImage('assets/image/cardDisciplina.png'),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      color: ColorSystem.primaryColor.withOpacity(0.60),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.push_pin_outlined,
-                            'Local',
-                            discipline.location,
-                          ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: ColorSystem.primaryColor.withOpacity(0.60),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.groups_outlined,
-                            'Responsável',
-                            discipline.responsible,
+                        constraints: BoxConstraints(minHeight: 150),
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: _buildInfoRow(
+                              Icones.group,
+                              'Nome',
+                              discipline.name,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: _buildInfoRow(
+                              Icones.location,
+                              'Local',
+                              discipline.location,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: _buildInfoRow(
+                              Icones.person,
+                              'Responsável',
+                              discipline.responsible,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Card(
-                elevation: 0,
-                margin: EdgeInsets.all(14.0),
-                color: Colors.transparent,
-                child: Stack(
-                  children: [
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/image/cardDisciplina.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      color: ColorSystem.primaryColor.withOpacity(0.60),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.push_pin_outlined,
-                            'Local',
-                            discipline.location,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.groups_outlined,
-                            'Responsável',
-                            discipline.responsible,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Card(
-                elevation: 0,
-                margin: EdgeInsets.all(14.0),
-                color: Colors.transparent,
-                child: Stack(
-                  children: [
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/image/cardDisciplina.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      constraints: BoxConstraints(minHeight: 150),
-                      color: ColorSystem.primaryColor.withOpacity(0.60),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.push_pin_outlined,
-                            'Local',
-                            discipline.location,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: _buildInfoRow(
-                            Icons.groups_outlined,
-                            'Responsável',
-                            discipline.responsible,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
         ),
@@ -219,13 +152,13 @@ class DisciplineDetailScreen extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: Colors.white, // Defina a cor do ícone como branca
+          color: Colors.white,
         ),
         SizedBox(width: 8),
         Text(
           '$label: $value',
           style: TextStyle(
-            color: Colors.white, // Defina a cor do texto como branca
+            color: Colors.white,
           ),
         ),
       ],

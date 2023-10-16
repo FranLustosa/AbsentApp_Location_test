@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/colors.dart';
 import 'package:flutter_primeiros_passos/src/ui/design_system/themes/fonts.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/themes/icons.dart';
-import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/button.dart';
+import 'package:flutter_primeiros_passos/src/ui/design_system/widgets/buttons.dart';
 import 'package:flutter_primeiros_passos/src/viewmodels/FormsViewModel.dart';
 
 class Forms extends StatelessWidget {

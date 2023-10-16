@@ -14,4 +14,7 @@ class Icones {
   static const IconData alert = Icons.privacy_tip_outlined;
   static const IconData viewPassword = Icons.visibility_outlined;
   static const IconData notViewPassword = Icons.visibility_off_outlined;
+  static const IconData person = Icons.person_2_outlined;
+  static const IconData close = Icons.cancel_outlined;
+  static const IconData alertError = Icons.gpp_bad_outlined;
 }
